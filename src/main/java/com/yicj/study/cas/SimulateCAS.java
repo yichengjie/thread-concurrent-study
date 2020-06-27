@@ -1,5 +1,7 @@
 package com.yicj.study.cas;
 
+import java.util.PriorityQueue;
+
 /**
  * ClassName: SimulateCAS
  * Description: TODO(描述)
@@ -28,5 +30,7 @@ public class SimulateCAS {
         String c = b + "1" ;
         System.out.println(a ==  c);
         System.out.println(a.equals(c));
+
+        PriorityQueue<Integer> queue = new PriorityQueue<>() ;
     }
 }
