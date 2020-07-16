@@ -9,9 +9,7 @@ import org.apache.commons.net.ftp.FTPReply;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 /**
  * FTP客户端工具类源码
@@ -26,9 +24,24 @@ import java.util.concurrent.FutureTask;
 @Slf4j
 public class FTPClientUtil {
 
+    private volatile static ThreadPoolExecutor threadPoolExecutor ;
     private final FTPClient ftp = new FTPClient() ;
-
     private final Map<String, Boolean> dirCreateMap = new HashMap<>() ;
+
+    static {
+        threadPoolExecutor = new ThreadPoolExecutor(1,
+                Runtime.getRuntime().availableProcessors() * 2,
+                60, TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(10),
+                r -> {
+                    Thread t  =new Thread(r) ;
+                    t.setDaemon(true);
+                    return t;
+                },
+                new ThreadPoolExecutor.CallerRunsPolicy()
+        ) ;
+    }
+
 
     private FTPClientUtil(){}
 
@@ -44,7 +57,8 @@ public class FTPClientUtil {
          * 下面这行代码与本案例的实际代码并不一致，这是为了讨论方便
          * 下面新建的线程相当于模式角色TaskExecutor
          */
-        new Thread(task).start();
+        //new Thread(task).start();
+        threadPoolExecutor.execute(task);
         return task ;
     }
 
