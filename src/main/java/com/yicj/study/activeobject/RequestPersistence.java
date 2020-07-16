@@ -1,5 +1,7 @@
 package com.yicj.study.activeobject;
 
+import com.yicj.study.activeobject.model.MMSDeliverRequest;
+
 /**
  * ClassName: RequestPersistence
  * Description: TODO(描述)

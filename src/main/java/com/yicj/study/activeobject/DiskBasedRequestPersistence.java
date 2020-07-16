@@ -1,5 +1,6 @@
 package com.yicj.study.activeobject;
 
+import com.yicj.study.activeobject.model.MMSDeliverRequest;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
@@ -9,7 +10,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * ClassName: DiskbasedRequestPersistence
+ * ClassName: DiskBasedRequestPersistence
  * Description: TODO(描述)
  * Date: 2020/7/16 21:09
  *
@@ -18,7 +19,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @version 产品版本信息 yyyy-mm-dd 姓名(邮箱) 修改信息
  */
 @Slf4j
-public class DiskbasedRequestPersistence implements RequestPersistence {
+public class DiskBasedRequestPersistence implements RequestPersistence {
 
     // 负责缓存文件的存储管理
     private final SectionBasedDiskStorage storage = new SectionBasedDiskStorage() ;

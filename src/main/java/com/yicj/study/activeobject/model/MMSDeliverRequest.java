@@ -1,4 +1,6 @@
-package com.yicj.study.activeobject;
+package com.yicj.study.activeobject.model;
+
+import com.yicj.study.activeobject.model.Recipient;
 
 import java.util.Date;
 
@@ -19,6 +21,10 @@ public class MMSDeliverRequest {
 
     public String getExpiry() {
 
+        return null ;
+    }
+
+    public Recipient getRecipient() {
         return null ;
     }
 }

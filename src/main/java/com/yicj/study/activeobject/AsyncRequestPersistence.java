@@ -1,8 +1,8 @@
 package com.yicj.study.activeobject;
 
+import com.yicj.study.activeobject.model.MMSDeliverRequest;
 import lombok.extern.slf4j.Slf4j;
 
-import java.sql.Time;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.*;
@@ -26,7 +26,7 @@ public class AsyncRequestPersistence implements RequestPersistence {
     private final AtomicLong taskTimeConsumedPerInterval = new AtomicLong(0) ;
     private final AtomicInteger requestSubmittedPerIterval = new AtomicInteger(0) ;
     // 模式角色：Servant
-    private final DiskbasedRequestPersistence delegate = new DiskbasedRequestPersistence() ;
+    private final DiskBasedRequestPersistence delegate = new DiskBasedRequestPersistence() ;
     // 模式角色Scheduler
     private final ThreadPoolExecutor scheduler ;
 
