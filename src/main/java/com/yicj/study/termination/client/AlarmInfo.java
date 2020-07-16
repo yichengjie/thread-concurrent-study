@@ -1,6 +1,4 @@
-package com.yicj.study.termination;
-
-import lombok.Data;
+package com.yicj.study.termination.client;
 
 /**
  * ClassName: AlarmInfo

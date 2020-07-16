@@ -1,4 +1,4 @@
-package com.yicj.study.termination;
+package com.yicj.study.termination.client;
 
 /**
  * ClassName: AlarmAgent

@@ -1,5 +1,6 @@
-package com.yicj.study.termination;
+package com.yicj.study.termination.client;
 
+import com.yicj.study.termination.AbstractTerminableThread;
 import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
