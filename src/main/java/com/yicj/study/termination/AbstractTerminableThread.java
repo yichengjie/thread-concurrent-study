@@ -24,8 +24,6 @@ public abstract class AbstractTerminableThread extends Thread implements Termina
         terminationToken.register(this);
     }
 
-
-
     /**
      * 留给子类实现，用于执行线程停止所需的操作，
      * 如目标线程代码中包含Socket I/O,子类可以在该方法中关闭Socket以达到快速停止线程，
@@ -104,6 +102,7 @@ public abstract class AbstractTerminableThread extends Thread implements Termina
             try {
                 doCleanup(ex);
             }finally {
+                // 通知其他可停止的线程停止
                 terminationToken.notifyThreadTermination(this);
             }
         }

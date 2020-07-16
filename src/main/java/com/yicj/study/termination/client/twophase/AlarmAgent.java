@@ -1,4 +1,6 @@
-package com.yicj.study.termination.client;
+package com.yicj.study.termination.client.twophase;
+
+import com.yicj.study.termination.client.twophase.model.AlarmInfo;
 
 /**
  * ClassName: AlarmAgent

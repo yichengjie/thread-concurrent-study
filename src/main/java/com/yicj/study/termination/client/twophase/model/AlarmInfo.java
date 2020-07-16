@@ -1,4 +1,4 @@
-package com.yicj.study.termination.client;
+package com.yicj.study.termination.client.twophase.model;
 
 /**
  * ClassName: AlarmInfo
