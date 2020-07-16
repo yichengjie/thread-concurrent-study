@@ -46,12 +46,9 @@ public class AsyncRequestPersistence implements RequestPersistence {
                 60 * ONE_MINUTE_IN_SECONDS, TimeUnit.SECONDS,
                 // 模式角色ActivationQueue
                 new ArrayBlockingQueue<>(200),
-                new ThreadFactory() {
-                    @Override
-                    public Thread newThread(Runnable r) {
-                        Thread t = new Thread(r, "AsyncRequestPersistence") ;
-                        return t;
-                    }
+                r -> {
+                    Thread t = new Thread(r, "AsyncRequestPersistence") ;
+                    return t;
                 }
         ) ;
         scheduler.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
@@ -61,7 +58,8 @@ public class AsyncRequestPersistence implements RequestPersistence {
             @Override
             public void run() {
                 log.info("task count: {}, Queue size: {}, taskTimeConsumedPerInterval: {} ms"
-                        , requestSubmittedPerIterval, scheduler.getQueue().size(), taskTimeConsumedPerInterval.get());
+                        , requestSubmittedPerIterval, scheduler.getQueue().size(),
+                        taskTimeConsumedPerInterval.get());
                 taskTimeConsumedPerInterval.set(0);
                 requestSubmittedPerIterval.set(0);
             }
@@ -73,18 +71,15 @@ public class AsyncRequestPersistence implements RequestPersistence {
     public void store(MMSDeliverRequest request) {
         // 对store方法的调用封装成MethodRequest对象，并存入缓冲区
         //模式角色：MethodRequest
-        Callable<Boolean> methodRequest = new Callable<Boolean>() {
-            @Override
-            public Boolean call() throws Exception {
-                long start = System.currentTimeMillis() ;
-                try {
-                    delegate.store(request);
-                }finally {
-                    taskTimeConsumedPerInterval.addAndGet(System.currentTimeMillis() - start) ;
-                }
-                return Boolean.TRUE;
+        Callable<Boolean> methodRequest = () -> {
+            long start = System.currentTimeMillis() ;
+            try {
+                delegate.store(request);
+            }finally {
+                taskTimeConsumedPerInterval.addAndGet(System.currentTimeMillis() - start) ;
             }
-        } ;
+            return Boolean.TRUE;
+        };
         scheduler.submit(methodRequest) ;
         requestSubmittedPerIterval.incrementAndGet() ;
     }
