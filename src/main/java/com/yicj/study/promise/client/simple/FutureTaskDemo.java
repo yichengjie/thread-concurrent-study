@@ -1,9 +1,7 @@
-package com.yicj.study.future;
+package com.yicj.study.promise.client.simple;
 
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.rmi.runtime.Log;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

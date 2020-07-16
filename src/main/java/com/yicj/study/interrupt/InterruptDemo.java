@@ -1,4 +1,4 @@
-package com.yicj.study.simple;
+package com.yicj.study.interrupt;
 
 /**
  * ClassName: InterruptDemo
