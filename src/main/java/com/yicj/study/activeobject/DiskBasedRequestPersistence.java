@@ -60,6 +60,7 @@ public class DiskBasedRequestPersistence implements RequestPersistence {
             int iFileCount ;
             boolean need2RemoveSection = false ;
             String [] fileName = new String[2] ;
+            // 这里有同步代码块
             synchronized (sectionLock){
                 // 获取当前存储子目录名
                 sectionName = this.getSectionName() ;
