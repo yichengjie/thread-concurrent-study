@@ -1,6 +1,6 @@
-package com.yicj.study.producerconsumer.client;
+package com.yicj.study.producerconsumer.client.attachement;
 
-import com.yicj.study.producerconsumer.BlockingQueueChannel;
+import com.yicj.study.producerconsumer.impl.BlockingQueueChannel;
 import com.yicj.study.producerconsumer.Channel;
 import com.yicj.study.termination.AbstractTerminableThread;
 

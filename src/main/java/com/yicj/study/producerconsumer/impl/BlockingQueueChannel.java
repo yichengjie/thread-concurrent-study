@@ -1,4 +1,6 @@
-package com.yicj.study.producerconsumer;
+package com.yicj.study.producerconsumer.impl;
+
+import com.yicj.study.producerconsumer.Channel;
 
 import java.util.concurrent.BlockingQueue;
 
