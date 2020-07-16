@@ -1,6 +1,6 @@
 package com.yicj.study.future;
 
-import javax.security.auth.callback.Callback;
+import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -14,6 +14,7 @@ import java.util.concurrent.FutureTask;
  * 修改记录
  * @version 产品版本信息 yyyy-mm-dd 姓名(邮箱) 修改信息
  */
+@Slf4j
 public class FutureTaskDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -22,13 +23,13 @@ public class FutureTaskDemo {
         futureTask.run();
 
         String s = futureTask.get();
-        System.out.println(s);
+        log.info(s);
     }
 
     static class Task implements Callable<String>{
         @Override
         public String call() throws Exception {
-            Thread.sleep(3000);
+            Thread.sleep(300);
             String name = Thread.currentThread().getName();
             return name +" test";
         }
