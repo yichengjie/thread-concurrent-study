@@ -1,6 +1,10 @@
 package com.yicj.study.future;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sun.rmi.runtime.Log;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -14,8 +18,9 @@ import java.util.concurrent.FutureTask;
  * 修改记录
  * @version 产品版本信息 yyyy-mm-dd 姓名(邮箱) 修改信息
  */
-@Slf4j
 public class FutureTaskDemo {
+
+    static Logger log = LoggerFactory.getLogger(FutureTaskDemo.class) ;
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Task task = new Task() ;
