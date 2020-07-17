@@ -43,7 +43,6 @@ public class ActivationQueue {
             try {
                 wait();
             }catch (InterruptedException e){
-
             }
         }
         MethodRequest request = requestQueue[head] ;
@@ -52,4 +51,5 @@ public class ActivationQueue {
         notifyAll();
         return request ;
     }
+
 }
