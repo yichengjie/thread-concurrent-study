@@ -21,7 +21,7 @@ public class FutureResult<T> extends Result<T> {
     }
 
     @Override
-    public T getResultValue() {
+    public synchronized T getResultValue() {
         while (!ready){
             try {
                 wait();
