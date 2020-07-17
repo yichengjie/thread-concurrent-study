@@ -1,7 +1,5 @@
-package com.yicj.study.activeobject.stage2.make;
+package com.yicj.study.activeobject.stage2;
 
-import com.yicj.study.activeobject.stage2.ActiveObject;
-import com.yicj.study.activeobject.stage2.Result;
 import lombok.extern.slf4j.Slf4j;
 
 /**

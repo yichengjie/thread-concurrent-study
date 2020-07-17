@@ -1,6 +1,4 @@
-package com.yicj.study.activeobject.stage2.display;
-
-import com.yicj.study.activeobject.stage2.ActiveObject;
+package com.yicj.study.activeobject.stage2;
 
 /**
  * ClassName: DisplayClientThread
@@ -13,6 +11,7 @@ import com.yicj.study.activeobject.stage2.ActiveObject;
  */
 public class DisplayClientThread extends Thread {
 
+    // 这里的activeObject是Proxy对象
     private final ActiveObject activeObject ;
 
     public DisplayClientThread(String name, ActiveObject activeObject){

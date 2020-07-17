@@ -1,8 +1,5 @@
 package com.yicj.study.activeobject.stage2;
 
-import com.yicj.study.activeobject.stage2.display.DisplayStringRequest;
-import com.yicj.study.activeobject.stage2.make.MakeStringRequest;
-
 /**
  * ClassName: Proxy
  * Description: TODO(描述)
