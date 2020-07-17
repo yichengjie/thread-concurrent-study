@@ -1,4 +1,7 @@
-package com.yicj.study.activeobject.stage2;
+package com.yicj.study.activeobject.stage2.display;
+
+import com.yicj.study.activeobject.stage2.MethodRequest;
+import com.yicj.study.activeobject.stage2.Servant;
 
 /**
  * ClassName: DisplayStringRequest

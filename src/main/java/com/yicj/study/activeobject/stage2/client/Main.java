@@ -1,4 +1,9 @@
-package com.yicj.study.activeobject.stage2;
+package com.yicj.study.activeobject.stage2.client;
+
+import com.yicj.study.activeobject.stage2.ActiveObject;
+import com.yicj.study.activeobject.stage2.ActiveObjectFactory;
+import com.yicj.study.activeobject.stage2.display.DisplayClientThread;
+import com.yicj.study.activeobject.stage2.make.MakerClientThread;
 
 /**
  * ClassName: Main

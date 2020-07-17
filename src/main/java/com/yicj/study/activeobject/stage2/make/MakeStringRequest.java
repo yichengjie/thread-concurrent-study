@@ -1,4 +1,9 @@
-package com.yicj.study.activeobject.stage2;
+package com.yicj.study.activeobject.stage2.make;
+
+import com.yicj.study.activeobject.stage2.FutureResult;
+import com.yicj.study.activeobject.stage2.MethodRequest;
+import com.yicj.study.activeobject.stage2.Result;
+import com.yicj.study.activeobject.stage2.Servant;
 
 /**
  * ClassName: MakeStringRequest

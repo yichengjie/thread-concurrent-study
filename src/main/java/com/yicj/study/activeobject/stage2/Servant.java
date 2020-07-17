@@ -16,7 +16,6 @@ public class Servant implements ActiveObject{
 
     @Override
     public Result<String> makeString(int count, char fillChar) {
-
         char [] buffer = new char[count] ;
         for (int i = 0 ; i < count ; i++){
             buffer[i] = fillChar ;
