@@ -1,4 +1,4 @@
-package com.yicj.study.activeobject.model;
+package com.yicj.study.activeobject.stage1.model;
 
 /**
  * ClassName: Recipient

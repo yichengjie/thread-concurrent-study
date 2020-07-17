@@ -1,6 +1,4 @@
-package com.yicj.study.activeobject.model;
-
-import com.yicj.study.activeobject.model.Recipient;
+package com.yicj.study.activeobject.stage1.model;
 
 import java.util.Date;
 

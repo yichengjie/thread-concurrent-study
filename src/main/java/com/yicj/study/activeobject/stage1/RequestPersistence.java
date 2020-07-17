@@ -1,6 +1,6 @@
-package com.yicj.study.activeobject;
+package com.yicj.study.activeobject.stage1;
 
-import com.yicj.study.activeobject.model.MMSDeliverRequest;
+import com.yicj.study.activeobject.stage1.model.MMSDeliverRequest;
 
 /**
  * ClassName: RequestPersistence

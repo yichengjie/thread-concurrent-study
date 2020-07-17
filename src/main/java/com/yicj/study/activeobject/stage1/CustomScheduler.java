@@ -1,4 +1,4 @@
-package com.yicj.study.activeobject;
+package com.yicj.study.activeobject.stage1;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;

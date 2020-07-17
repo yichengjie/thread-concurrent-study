@@ -1,8 +1,8 @@
-package com.yicj.study.activeobject.client;
+package com.yicj.study.activeobject.stage1.client;
 
-import com.yicj.study.activeobject.AsyncRequestPersistence;
-import com.yicj.study.activeobject.model.MMSDeliverRequest;
-import com.yicj.study.activeobject.model.Recipient;
+import com.yicj.study.activeobject.stage1.AsyncRequestPersistence;
+import com.yicj.study.activeobject.stage1.model.MMSDeliverRequest;
+import com.yicj.study.activeobject.stage1.model.Recipient;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
